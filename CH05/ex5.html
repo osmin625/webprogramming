@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>이미지 기본 표현</h3>
+    <img
+      src="sea.jpg"
+      alt="이미지가 표현되지 않습니다."
+      title="Sea"
+      style="width: 300px; height: 200px"
+    />
+    <h3>오디오 자동 재생</h3>
+    <audio src="eagle.mp3" controls loop autoplay></audio>
+    <h3>오디오 수동 재생</h3>
+    <audio src="bear.mp3" controls></audio>
+    <h3>오디오 다중 재생</h3>
+    <audio controls>
+      <source src="chicken.mp3" type="audio/mpeg" />
+      <source src="chicken.ogg" type="audio/ogg" />
+      <source src="chicken.wav" type="audio/wav" />
+      오디오 파일을 재생할 수 없습니다.
+    </audio>
+    <object type="application/pptx" data="lecture2-intro-boolean"></object>
+    <hr />
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Get 방식</title>
+      </head>
+      <body>
+        <h2>GET 방식으로 데이터 전송</h2>
+        <form action="01_getdata.jsp" method="get">
+          <p>이름 : <input type="text" name="name" /></p>
+          <p>전공 : <input type="text" name="major" /></p>
+          <p></p>
+          <input type="submit" value="전송" />
+          <input type="reset" value="다시작성" />
+        </form>
+      </body>
+    </html>
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>POST 방식</title>
+      </head>
+      <body>
+        <h2>POST 방식으로 데이터 전송</h2>
+        <form action="02_postdata.jsp" method="POST">
+          <p>id : <input type="text" name="name" /></p>
+          <p>
+            password :
+            <input type="password" name="psw" placeholder="비밀번호" required />
+            <!-- required를 사용하면 반드시 내용이 있어야 제출할 수 있음.-->
+          </p>
+          <p></p>
+          <input type="submit" value="전송" />
+          <input type="reset" value="다시작성" />
+        </form>
+      </body>
+      <body>
+        <h2>텍스트 공간 입력 양식</h2>
+        <form>
+          <textarea rows="5" cols="50">
+텍스트 공간의 크기를 지정할 수 있음</textarea
+          >
+          <p></p>
+          <input type="submit" value="전송" />
+          <input type="reset" value="다시작성" />
+        </form>
+      </body>
+      <body>
+        <form>
+          <fieldset>
+            <legend>fieldset은 테두리가 그려진다.</legend>
+            <p>이름 : <input type="text" name="name" /></p>
+            <!-- p태그는 한줄씩 분리하기 위해서 사용됨.-->
+            <p>학교 : <input type="text" name="school" /></p>
+            <!-- input 태그로 여러 입력값의 속성을 정할 수 있다.-->
+            <input type="submit" value="제출" />
+            <!--제출 버튼을 만들수도 있고-->
+            <input type="reset" value="다시작성" />
+            <!--리셋 버튼을 만들 수도 있다.-->
+          </fieldset>
+        </form>
+      </body>
+      <body>
+        <form>
+          <h3>당신의 성별은 무엇입니까?</h3>
+          <input type="radio" name="sex" value="male" checked />남자
+          <!--checked로 default값을 설정할 수 있다.-->
+          <input type="radio" name="sex" value="female" />여자
+          <!--같은 그룹의 name 속성은 동일해야 한다.-->
+          <p></p>
+          <h3>당신은 몇 학년입니까?</h3>
+          <input type="radio" name="year" value="1" checked />1학년
+          <input type="radio" name="year" value="2" />2학년
+          <input type="radio" name="year" value="3" />3학년
+          <input type="radio" name="year" value="4" />4학년
+          <p></p>
+          <input type="submit" value="제출" />
+          <input type="reset" value="다시작성" />
+        </form>
+      </body>
+    </html>
+    <body>
+      <form>
+        <h3>현재 관심을 가지고 있는 학습 주제는 무엇입니까?</h3>
+        <input type="checkbox" name="subject" value="HTML5" checked />HTML5
+        <br />
+        <input type="checkbox" name="subject" value="CSS3" />CSS3 <br />
+        <input type="checkbox" name="subject" value="Javascript" />Javascript
+        <br />
+        <input type="checkbox" name="subject" value="Jquery" />Jquery
+        <p></p>
+        <input type="submit" value="제출" />
+        <input type="reset" value="다시작성" />
+      </form>
+    </body>
+    <body>
+      <form>
+        <h3>Button 태그 사용</h3>
+        <button type="button" onclick="alert('클릭-1 사용')">클릭-1</button>
+        <h3>Input 태그 사용</h3>
+        <input type="button" onclick="alert('클릭-2 사용')" value="클릭-2" />
+        <h3>Image 버튼 사용</h3>
+        <button type="button" onclick="alert('클릭-3 사용')">
+          <img src="button.jpg" />
+        </button>
+      </form>
+    </body>
+  </body>
+  <body>
+    <h3>그룹별 선택 항목을 제공합니다.</h3>
+    <form>
+      <label
+        >전공 분야를 선택하세요.
+        <select name="major">
+          <optgroup label="computer">
+            <option>Software</option>
+            <option>Robot</option>
+            <option>System</option>
+          </optgroup>
+          <optgroup label="language">
+            <option selected>Korea</option>
+            <option>English</option>
+            <option>China</option>
+            <option>Germany</option>
+          </optgroup>
+        </select>
+        <p></p>
+        <input type="submit" value="선택" />
+        <input type="reset" value="다시선택"
+      /></label>
+    </form>
+  </body>
+  <body>
+    <h3>선택사항을 직접 입력하세요.</h3>
+    <form>
+      <label
+        >전공 분야를 입력하세요.
+        <input type="text" list="majorlist" name="major" />
+        <datalist id="majorlist">
+          <option value="Software">소프트웨어</option>
+          <option value="Robot">로봇</option>
+          <option value="System">시스템</option>
+          <option value="Service">서비스</option>
+          <option value="Education">교육</option>
+        </datalist>
+        <p></p>
+        <input type="submit" value="완료" />
+        <input type="reset" value="다시작성"
+      /></label>
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>오늘 날짜 입력</h3>
+      Today : <input type="date" name="today" />
+      <h3>프로젝트 수행 기간</h3>
+      From :
+      <input type="date" name="from" min="2016-03-01" max="2016-12-31" /> To :
+      <input type="date" name="to" min="2018-03-01" max="2018-06-30" />
+      <p></p>
+      <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>생일(년/월) 입력</h3>
+      생일 : <input type="month" name="birth" />
+      <h3>주간 계획(년/주) 입력</h3>
+      주간 계획 : <input type="week" name="weekeend" />
+      <p></p>
+      <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>원하는 색상을 선택하세요.</h3>
+      <input type="color" name="color_value" value="#0000ff" />
+      <p></p>
+      <input type="submit" value="선택완료" />
+      <input type="reset" value="다시선택" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>나이를 입력하세요.</h3>
+      <input type="number" name="count" min="1" max="130" />
+      <p></p>
+      <input type="submit" value="완료" />
+      <input type="reset" value="초기화" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>0~100 범위에서 원하는 지점을 선택하세요.</h3>
+      <input type="range" name="point" min="0" max="100" />
+      <p></p>
+      <input type="submit" value="완료" />
+      <input type="reset" value="초기화" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>이메일을 정확하게 입력하세요.</h3>
+      이메일 : <input type="email" name="myemail" />
+      <!--type이 email인 경우 알아서 제대로된 이메일 형식인지 검증해준다.-->
+      <p></p>
+      <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>홈페이지 주소를 입력하세요.</h3>
+      홈페이지 : <input type="url" name="myhome" />
+      <!--url 형식이 맞는지 알아서 검사해준다.-->
+      <p></p>
+      <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>검색어를 입력하세요.</h3>
+      구글검색 : <input type="search" name="googlesearch" />
+      <p></p>
+      <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+    </form>
+  </body>
+  <body>
+    <form>
+      <h3>학습량 그래프</h3>
+      홍민성 :
+      <meter min="0" max="100" optimum="50" value="60">60 out of 100</meter
+      ><br />
+      송지효 : <meter low="0.3" high="0.5" value="0.22">22%</meter><br />
+      이민정 :
+      <meter low="0.25" high="0.75" optimum="0.8" value="0.2">20%</meter>
+      <p></p>
+      <h3>작업 진행율</h3>
+      초기 작업 : <progress value="22" max="100" title="진행율">22%</progress
+      ><br />
+      중간 작업 : <progress value="0.77" max="1">77%</progress><br />
+      다음 작업 : <progress value="0.98" max="1">98%</progress><br />
+    </form>
+  </body>
+  <body>
+    <h3>div/span 공간 분할 조합</h3>
+    <div style="height: 70px; background-color: #ffff00">머리말 영역</div>
+    <!--div tag는 블럭 태그이다.-->
+    <div style="height: 50px; background-color: #ff00ff">본문 영역</div>
+    <span style="background-color: #ff0000">왼쪽 텍스트 영역</span>
+    <!--span tag는 인라인 태그이다-->
+    <span style="background-color: #ffffff">가운데 텍스트 영역</span>
+    <span style="background-color: #0000ff">오른쪽 텍스트 영역</span>
+    <div style="height: 40px; background-color: #ffff00">꼬리말 영역</div>
+  </body>
+  <body>
+    <h3>iframe 공간 분할 예제</h3>
+    <div style="background-color: #ffff00">
+      <span> <a href="intro.html" target="if_a">인사말</a> | </span>
+      <span> <a href="lecture.html" target="if_a">강좌 소개</a> | </span>
+      <span>
+        <a href="http://cafe.naver.com/go2web" target="if_b">저자 홈페이지</a>
+      </span>
+    </div>
+    <p />
+    <iframe
+      src="1.html"
+      width="400"
+      height="200"
+      name="if_a"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      src="1.html"
+      width="400"
+      height="200"
+      name="if_b"
+      scrolling="no"
+    ></iframe>
+    <div style="background-color: #ffff00">1</div>
+  </body>
+</html>

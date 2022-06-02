@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="carname"></p> 
+    <p id="carcolor"></p> 
+    <p id="carspeed"></p>
+    <script>
+        var car={
+            name: 'Sonata',
+            speed: 50,
+            color: 'white',
+            start: function() {
+                return this.speed+10;
+                //this를 제거하면 값이 출력되지 않는다.
+            }
+        };
+        var cname=document.getElementById("carname");
+        cname.textContent=car.name;
+        var colname=document.getElementById("carcolor");
+        colname.innerHTML=car.color;
+        //textContent를 innerHTML로 변경해도 동작한다.
+        //textContent: 실제로 존재하는 텍스트만 가져오는 것
+        //innerText: 스타일 속성 등으로 사용자가 볼 수 있는 텍스트만 가져오는 것
+        var cspeed=document.getElementById("carspeed");
+        cspeed.textContent=car.start();
+    </script>
+</body>
+</html>

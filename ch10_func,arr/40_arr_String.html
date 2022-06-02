@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        var data=[];
+        for(var i=0; i<10; ++i) {
+            data[i]=[i+"-"+0, String(i+"-"+1), String(i+"-"+2)];
+            //String이 없더라도, + 기호를 만나면 문자열로 변환해준다.
+        }
+        function printData() {
+            for(var x=0; x<data.length; x++) {
+                for(var y=0; y<data[x].length; y++) {
+                    document.write(data[x][y] + " ");
+	            }
+	            document.write("<p/>");
+            }
+            document.write("<a href='40_arr.html'>돌아가기</a>");       
+        }
+    </script> 
+    <button type="button" onclick="printData()">전체 배열 데이터 보기</button>
+</body>
+</html>

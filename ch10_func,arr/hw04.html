@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input:focus{
+        border-color: rgb(93, 176, 249);
+        outline: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>N 팩토리얼 계산 값을 입력하시오.</p>
+    </br>
+    <input id="input" type="text">
+    <button type="button" onclick=go(input.value)>N 팩토리얼 계산</button>
+    <p id="result"></p>
+    <script>
+      function go(n){
+        function cal(n){
+            if(n == 1)return 1;
+            else return n*cal(n-1)
+        }
+        document.getElementById("result").innerHTML =n+"! 계산 결과는 " + cal(n * 1)+"입니다.";
+      }
+    </script>
+  </body>
+</html>

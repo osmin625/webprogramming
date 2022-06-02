@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        inline-size: 70px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>색이름과 색</h2>
+    <hr />
+    <script>
+      var colorNames = [
+        "maroon",
+        "red",
+        "orange",
+        "yellow",
+        "olive",
+        "purple",
+        "fuchsia",
+        "white",
+        "lime",
+        "green",
+        "navy",
+        "blue",
+        "aqua",
+        "teal",
+        "black",
+        "silver",
+        "gray",
+      ];
+    </script>
+    <div>
+      <table>
+        <thead></thead>
+        <tbody>
+          <script>
+            for (var i = 0; i < colorNames.length; i++) {
+              if (i == 0 || i == 6 || i == 12) document.write("<tr>");
+              document.write('<td id="' + i + '"></td>');
+              if (i == 5 || i == 11 || i == colorNames.length - 1)
+                document.write("</tr>");
+            }
+          </script>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      for (var i = 0; i < colorNames.length; i++) {
+        document.getElementById(i).innerHTML = colorNames[i];
+        document.getElementById(i).style.backgroundColor = colorNames[i];
+      }
+    </script>
+  </body>
+</html>

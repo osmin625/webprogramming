@@ -1,0 +1,61 @@
+<head>
+  <style>
+    div.stretch{
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      border: 1px solid red;
+      transition: width 2s;
+    }
+    div:hover {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="stretch">마우스를 올리면 박스가 늘어납니다.</div>
+</body>
+</br>
+</br>
+<head>
+  <style>
+    div.rotate{
+      margin: 50px;
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      border: 1px solid red;
+      transition: width 3s, height 3s, border 3s, transform 3s;
+    }
+    div.rotate:hover {
+      width: 200px;
+      height: 200px;
+      border: 3px solid blue;
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="rotate">마우스를 올리면 박스가 회전하면서 커집니다.</div>
+</body>
+</br>
+</br>
+<head>
+    <style>
+    div.colortr {
+    width: 280px;
+    height: 100px;
+    background: orange;
+    transition: background;
+    transition-duration: 10s;
+    }
+    div.colortr:hover {
+    background: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="colortr">색상이 10초 동안 서서히 변합니다.</div>
+</body>
+</br>
+</br>

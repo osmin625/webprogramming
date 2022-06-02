@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: brown;
+        text-align: center;
+      }
+      h2 {
+        color: blue;
+      }
+      form {
+        background-color: pink;
+      }
+      footer {
+        background-color: orange;
+      }
+      span {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>설문지</h1>
+    <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+    <form>
+      <legend>설문 내용</legend>
+      <p>
+        <span>학년</span>
+        <input type="radio" name="grade" value="1" checked />1학년
+        <input type="radio" name="grade" value="2" />2학년
+        <input type="radio" name="grade" value="3" />3학년
+        <input type="radio" name="grade" value="4" />4학년
+      </p>
+      <p>
+        <span>성별</span>
+        <input type="radio" name="sex" value="male" checked />남자
+        <input type="radio" name="sex" value="female" />여자
+      </p>
+      <label>
+        <span>관심 분야</span>
+        <select name="major">
+          <option selected>웹서비스</option>
+          <option>AI</option>
+          <option>빅데이터</option>
+          <option>메타버스</option>
+        </select>
+      </label>
+      <!-- p태그는 한줄씩 분리하기 위해서 사용됨.-->
+      <p>
+        <span>진로</span>
+        <input type="checkbox" name="subject" value="HTML5" checked />기획
+        <input type="checkbox" name="subject" value="CSS3" />개발
+        <input type="checkbox" name="subject" value="Javascript" />창업
+        <input type="checkbox" name="subject" value="Jquery" />영업
+      </p>
+      <form>
+        <span>남기고 싶은 말</span>
+        <textarea rows="5" cols="50">하고싶은 말을 남겨주세요</textarea>
+      </form>
+    </form>
+    <footer>
+      <p>copyright 2022 by ohseungmin</p>
+    </footer>
+  </body>
+</html>

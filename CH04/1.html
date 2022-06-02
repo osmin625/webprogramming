@@ -1,0 +1,102 @@
+<!--첫 화면에서 느낌표하고 엔터를 입력하면 양식이 자동완성된다.-->
+<!--저장을 해야 웹에 반영된다.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="http://www.w3.org/"/>
+    <!--base 주소 설정, 상대주소를 입력할 때 위의 주소가 기준이 된다.-->
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문서의 제목</h1>
+    <hr />
+    문서의 구분선
+    <p>단락 구분</p>
+    <strong>중요한 문장</strong>
+    <br />줄 바꿈
+    <h1>this is head1</h1>
+    <img src="sea.jpg" border="1" width="200" height="130"
+alt="This is sea" title="환영합니다!">
+    <h2>this is head2</h2>
+    <h3>this is head3</h3>
+    <h4>this is head4</h4>
+    <h5>this is head5</h5>
+    <h6>this is head6</h6>
+    <a href="https://www.w3schools.com">This is a link</a>
+    <hr size="10" align="left" width="90%"></hr>
+
+    <!-- <a href="javascript:alert('hello');"></a> -->
+    <pre><!--문자를 문자 그대로 인식하게 해주는 공간.-->
+        ###안녕하세요.###
+        <><>
+        <!-- 주석은 pre 내에서도 주석으로 동작한다.-->
+        &&&&&&
+    </pre>
+    <section>
+        <article>
+            <a href="#user">[이름]</a> &nbsp;
+            <a href="#addr">[주소]</a> &nbsp;
+            <a href="#tel">[전화번호]</a> &nbsp;
+            <p><b>텍스트 볼드 처리</b></p>
+            <p><strong>텍스트 중요 표시</strong></p>
+            <p><i>텍스트를 이탤릭체로</i></p>
+            <p><em>텍스트 강조 표시</em></p>
+            <p><ins>텍스트 밑줄 처리</ins></p>
+            <p><del>텍스트 가운데 선 처리</del></p>
+            <p>텍스트<sub>아래첨자</sub>텍스트<sup>윗첨자</sup></p>
+            <p><mark>텍스트에 하이라이트 표시</mark></p>
+            <a href="standards/" target="_blank">W3C STANDARDS</a>
+            <p/>
+            <a href="Consortium/mission.html" target="_blank">W3C MISSION</a>
+            <p/>
+            <a href="Consortium/facts.html" target="_blank">FACTS ABOUT W3C</a>
+            <p/>
+            <a href="Consortium/presskit.html" target="_blank">PRESS AND ANALYSTS</a>
+            <p/>
+            <a href="#top">[TOP]</a>
+            <p><a name="user">오승민</a></p>
+            <p><a id="addr">대구</a></p>
+            <p id="tel">38794145</p>
+        </article>
+    </section>
+    <table border="1" style="width:50%">
+        <tr>
+        <th>이름</th>
+        <th>점수</th>
+        </tr>
+        <tr>
+        <td>오승민</td>
+        <td>90</td>
+        </tr>
+        <tr>
+        <td>육승민</td>
+        <td>80</td>
+        </tr>
+        <tr>
+        <td>칠승민</td>
+        <td>70</td>
+        </tr>
+    </table>
+    <table border="1" style="width:50%">
+        <caption>행, 열 통합 테이블</caption>
+        <tr>
+            <th colspan="2">hello?</th>
+        </tr>
+        <tr>
+            <th rowspan="2">오승민</th>
+        <td>90</td>
+        </tr>
+        <tr>
+        <td>80</td>
+        </tr>
+        <tr>
+        <td>칠승민</td>
+        <td>70</td>
+        </tr>
+    </table>
+    
+  </body>
+</html>

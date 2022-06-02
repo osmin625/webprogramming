@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <div id="digClock"></div>
+    <script>
+        function digClock() {
+            var today=new Date();
+            var day=today.getMonth()+1 + "월 " + today.getDate() + "일 ";  
+            var time=today.getHours() + "시 " + today.getMinutes() + "분 " + today.getSeconds() + "초";
+            document.getElementById("digClock").innerHTML=day+time;
+            setTimeout('digClock()', 1000);
+            //sleep()처럼 생각하면 될 듯...하다
+            //다만 sleep() 이후 실행해야 할 함수를 파라미터로 제공해야 한다.
+        }
+        digClock();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <p>아이디와 비밀번호를 입력해주세요</p>
+    
+    <script>
+      id = prompt("아이디 입력를 입력해주세요");
+      if (id == "admin1"||id == "admin2" || id=="admin3") {
+        password = prompt("비밀번호를 입력해주세요");
+        if (id=="admin1"&& password === "123") {
+          location.href = "hw03_login.html";
+        }
+        else if(id=="admin2"&& password === "456"){
+            location.href = "hw03_login.html";
+        }
+        else if(id=="admin3"&& password === "789"){
+            location.href = "hw03_login.html";
+        }else {
+          location.href = "hw03.html";
+        }
+      } else {
+        location.href = "hw03.html";
+      }
+    </script>
+  </body>
+</html>

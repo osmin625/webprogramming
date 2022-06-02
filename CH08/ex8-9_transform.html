@@ -1,0 +1,139 @@
+<head>
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px dotted black;
+      background-color: yellow;
+    }
+    div#box2 {
+      transform: translate(100px, 50px);
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">박스 1</div>
+  <div id="box2">박스 2</div>
+</body>
+</br>
+</br>
+<head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px dotted black;
+      background-color: lightgreen;
+      margin: 30px;
+    }
+    div#box3 {
+      transform: rotate(45deg);
+    }
+    div#box4 {
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+<body>
+  <div>기본 박스 (0deg)</div>
+  <div id="box3">박스 3 (45deg)</div>
+  <div id="box4">박스 4 (-90deg)</div>
+</body>
+</br>
+</br>
+<head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px dotted black;
+      background-color: skyblue;
+      margin: 50px;
+    }
+    div#box5 {
+      transform: scale(0.5, 0.5);
+    }
+    div#box6 {
+      transform: scale(2, 1.5);
+    }
+  </style>
+</head>
+<body>
+  <div>기본 박스</div>
+  <div id="box5">박스 5 (0.5배 축소)</div>
+  <div id="box6">박스 6 (가로 2배, 세로 1.5배 확대)</div>
+</body>
+</br>
+</br>
+<head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px dotted black;
+      background-color: lightgreen;
+      margin: 50px;
+    }
+    div#box7 {
+      transform: skewX(20deg);
+    }
+    div#box8 {
+      transform: skewY(20deg);
+    }
+    div#box9 {
+      transform: skew(20deg, 20deg);
+    }
+  </style>
+</head>
+<body>
+  <div>기본 박스</div>
+  <div id="box7">박스 7</div>
+  <div id="box8">박스 8</div>
+  <div id="box9">박스 9</div>
+</body>
+</br>
+</br>
+<head>
+<style>
+div {
+width: 50px;
+height: 50px;
+background-color: silver;
+border: 1px solid black;
+text-align: center;
+}
+div#box10 {
+transform: rotate(45deg) scale(1.5) skew(30deg) translate(50px);
+}
+div#box11 {
+transform: translate(200px) rotate(-90deg) scale(2);
+}
+</style>
+</head>
+<body>
+<div>기본 박스</div>
+<div id="box10">박스 10</div>
+<div id="box11">박스 11</div>
+</body>
+</br>
+</br>
+<head>
+    <style>
+    div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: yellow;
+    }
+    .c1:hover {
+    transform-origin: 50% 50% 0px;
+    transform: translate(0px, 0px) rotate(-45deg) scale(0.7);
+    background: green;
+    }
+    </style>
+</head>
+<body>
+    <div>
+    <div class="c1">박스 안에 마우스를 올리면 무엇이 보일까요?</div>
+    </div>
+</body>
