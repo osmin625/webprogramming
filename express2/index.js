@@ -3,7 +3,7 @@ const app = new express()
 const ejs = require('ejs')
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload')
-mongoose.connect('mongodb://localhost:27017/my_database',{useNewUrlParser:true})
+mongoose.connect('mongodb+srv://osmin625:osmin625@cluster0.mkmcxir.mongodb.net/test',{useNewUrlParser:true})
 const validateMiddleWare = require('./middleware/validationMiddleware')
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
@@ -13,23 +13,46 @@ const getPostController = require('./controllers/getPost')
 const newUserController = require('./controllers/newUser')
 const loginController = require('./controllers/login')
 const loginUserController = require('./controllers/loginUser')
+const expressSession = require('express-session');
+const authMiddleware = require('./middleware/authMiddleware');
+const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
+const logoutController = require('./controllers/logout')
+
+global.loggedIn = null;
+let port = process.env.PORT;
+if(port == null || port == ''){
+    port = 4000;
+}
+
+app.listen(port,()=>{
+    console.log('App listening...')
+})
 app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(fileUpload())
 app.use('/posts/store',validateMiddleWare)
-app.listen(4000, ()=>{
-    console.log('App listening on port 4000')
+app.use(expressSession({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}))
+app.use("*", (req,res,next) =>{
+    if(req.session.userId)
+        loggedIn = req.session.userId;
+    next()
 })
-app.get('/auth/register',newUserController)
-app.get('/auth/login',loginController)
+
+app.get('/auth/register',redirectIfAuthenticatedMiddleware,newUserController)
+app.get('/auth/login',redirectIfAuthenticatedMiddleware,loginController)
+app.get('/auth/logout', logoutController)
 
 app.get('/',homeController)
 app.get('/post/:id',getPostController)
-app.get('/posts/new',newPostController)
-app.post('/posts/store',storePostController)
+app.get('/posts/new',authMiddleware,newPostController)
+app.post('/posts/store',authMiddleware,storePostController)
 
-app.post('/users/register',storeUserController)
-app.post('/users/login',loginUserController)
+app.post('/users/register',redirectIfAuthenticatedMiddleware,storeUserController)
+app.post('/users/login',redirectIfAuthenticatedMiddleware,loginUserController)
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
